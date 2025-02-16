@@ -5,6 +5,9 @@ for x in arr:
     if min > x:
          min_old = min
          min=x
+    else:
+        if min_old == min or x < min_old:
+            min_old = x
 
 
 print(min_old)

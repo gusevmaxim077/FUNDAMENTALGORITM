@@ -2,6 +2,17 @@ import timeit
 import random
 from random import randint
 
+
+
+    # создание списка, его сортировка по возрастанию и вывод на экран
+a = []
+for i in range(10):
+    a.append(randint(1, 50))
+a.sort()
+print(a)
+# искомое число
+value = int(input())
+
     
 def fun():
     kol_vo = 0
@@ -25,13 +36,8 @@ def fun():
     else:
         return("id:",mid,"kol-vo:",kol_vo)
 
-
-    # создание списка, его сортировка по возрастанию и вывод на экран
-for j in range(10):
-    a = []
-    for i in range(10000):
-        a.append(randint(1, 50000))
-    a.sort()
-    print(a)
-    # искомое число
-    value = randint(1, 50)
+start = timeit.default_timer()
+print("The start time is :",start)
+a = fun()
+print("The difference of time is :", timeit.default_timer() - start)
+print(a)

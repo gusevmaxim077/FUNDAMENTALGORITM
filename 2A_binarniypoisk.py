@@ -1,4 +1,3 @@
-import timeit
 import random
 from random import randint
 
@@ -36,8 +35,6 @@ def fun():
     else:
         return("id:",mid,"kol-vo:",kol_vo)
 
-start = timeit.default_timer()
-print("The start time is :",start)
+
 a = fun()
-print("The difference of time is :", timeit.default_timer() - start)
 print(a)
